@@ -1,0 +1,20 @@
+# Theme DummyTheme
+
+![Theme DummyTheme](theme_dummyTheme.png)
+
+
+## Assets kopieren
+```
+php artisan vendor:publish --provider="ITHilbert\ThemeDummyTheme\ThemeDummyThemeServiceProvider" --tag=assets
+```
+
+## Config File kopieren
+```
+php artisan vendor:publish --provider="ITHilbert\ThemeDummyTheme\ThemeDummyThemeServiceProvider" --tag=config
+
+### Author
+IT-Hilbert GmbH
+
+Access, Excel, VBA und Web Programmierungen
+
+Homepage: [IT-Hilbert.com](https://www.IT-Hilbert.com)

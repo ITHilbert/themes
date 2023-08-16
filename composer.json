@@ -1,0 +1,39 @@
+{
+    "name": "ithilbert/themes",
+    "type": "libary",
+    "license": "MIT",
+    "description": "Package für  meine Themes",
+    "keywords": [
+        "it-hilbert",
+        "laravel",
+        "homepage"
+    ],
+    "authors": [{
+        "name": "Jörg Hilbert",
+        "homepage": "https://www.it-hilbert.com",
+        "role": "Developer"
+    }],
+    "homepage": "https://www.it-hilbert.com",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ITHilbert\\Themes\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ITHilbert\\Themes\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ITHilbert\\Themes\\ThemesServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    }
+}

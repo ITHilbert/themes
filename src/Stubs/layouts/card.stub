@@ -1,0 +1,30 @@
+@extends('theme_dummyTheme::layouts.app')
+
+@section('content')
+    @yield('before-card')
+    <card-main>
+        @yield('card-start')
+        <card-header>
+            <h1>
+                @unless(View::hasSection('card-header'))
+                    @yield('title')
+                @else
+                    @yield('card-header')
+                @endif
+            </h1>
+        </card-header>
+        @yield('before-card-body')
+        <card-body>
+            @include('include.message')
+            @yield('card-body')
+        </card-body>
+        @yield('after-card-body')
+        @hasSection('card-footer')
+            <card-footer>
+                @yield('card-footer')
+            </card-footer>
+        @endif
+        @yield('card-ende')
+    </card-main>
+    @yield('after-card')
+@stop

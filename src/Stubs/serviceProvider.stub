@@ -1,0 +1,70 @@
+<?php
+
+namespace ITHilbert\ThemeDummyTheme;
+
+use Illuminate\Support\ServiceProvider;
+
+class ThemeDummyThemeServiceProvider extends ServiceProvider
+{
+
+    /**
+     * Boot the application events.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this->registerViews();
+        $this->publishAssets();
+        $this->registerConfig();
+        $this->registerTranslations();
+    }
+
+
+    /**
+     * Register views.
+     *
+     * @return void
+     */
+    public function registerViews()
+    {
+        $this->loadViewsFrom(__DIR__ .'/Views', 'theme_dummyTheme');
+    }
+
+    /**
+     * Register translations.
+     *
+     * @return void
+     */
+    public function registerTranslations()
+    {
+        $this->loadTranslationsFrom(__DIR__ .'/Lang', 'theme_dummyTheme');
+    }
+
+
+    /**
+     * Assets kopieren
+     *
+     * @return void
+     */
+    public function publishAssets()
+    {
+        $this->publishes([
+            __DIR__ .'/Assets' => public_path('themes/dummyTheme'),
+        ], 'assets');
+    }
+
+
+    /**
+     * Register config.
+     *
+     * @return void
+     */
+    protected function registerConfig()
+    {
+        $this->publishes([
+            __DIR__ .'/Config/dummyTheme.php' => config_path('themes/dummyTheme.php')
+        ],'config');
+    }
+
+}

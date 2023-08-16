@@ -1,0 +1,14 @@
+@extends('theme_dummyTheme::layouts.basic')
+
+@section('header')
+    @include('components.header.main')
+@stop
+
+@section('sidebar')
+    @include('components.sidebar.main')
+@stop
+
+
+@section('footer')
+    @include('components.footer')
+@stop

@@ -1,0 +1,22 @@
+<?php
+
+return [
+    'name' => 'DummyTheme',
+
+    'js' => [
+        [
+            'url' => '',
+            'active' => true,
+            'extern' => false,
+        ]
+    ],
+
+    'css' => [
+        [
+            'url' => '',
+            'active' => true,
+            'extern' => false,
+        ]
+    ],
+
+];
