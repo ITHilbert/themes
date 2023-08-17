@@ -15,9 +15,11 @@ class ThemeDummyThemeServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerViews();
-        $this->publishAssets();
-        $this->registerConfig();
         $this->registerTranslations();
+
+        $this->publishAssets();
+        $this->publishConfig();
+        $this->publishViews();
     }
 
 
@@ -54,13 +56,25 @@ class ThemeDummyThemeServiceProvider extends ServiceProvider
         ], 'assets');
     }
 
-
     /**
-     * Register config.
+     * Views kopieren
      *
      * @return void
      */
-    protected function registerConfig()
+    public function publishViews()
+    {
+        $this->publishes([
+            __DIR__ .'/Views' => resource_path('views/vendor/theme_dummyTheme'),
+        ], 'views');
+    }
+
+
+    /**
+     * Publish config.
+     *
+     * @return void
+     */
+    protected function publishConfig()
     {
         $this->publishes([
             __DIR__ .'/Config/dummyTheme.php' => config_path('themes/dummyTheme.php')
