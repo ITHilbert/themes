@@ -13,10 +13,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//define('theme', 'theme_phoenix');
 
 if(env('APP_ENV') == 'local'){
     Route::middleware(['web'])->group(function () {
-        Route::get('themes', [ThemesController::class, 'index'])->name('themes');
+        Route::get('themes/show', [ThemesController::class, 'index'])->name('themes');
     });
 }
 

@@ -29,7 +29,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ITHilbert\\DummyTheme\\ThemeDummyThemeServiceProvider"
+                "ITHilbert\\ThemeDummyTheme\\ThemeDummyThemeServiceProvider"
             ],
             "aliases": {
 
